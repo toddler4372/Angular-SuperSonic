@@ -1,3 +1,7 @@
+/* global app:true */
+/* exported app */
+/* 'Firebase': false */
+
 'use strict';
 
 /**
@@ -8,24 +12,28 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('devNews', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
+
+  .constant('FIREBASE_URL', 'https://sweltering-heat-8723.firebaseio.com/')
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/posts/:postId', {
+        templateUrl: 'views/showpost.html',
+        controller: 'PostViewCtrl'
       })
       .otherwise({
         redirectTo: '/'

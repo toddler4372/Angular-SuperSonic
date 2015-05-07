@@ -15,9 +15,13 @@ app.controller('AuthCtrl', function ($scope, $location, Auth, user) {
 	};
 	// Take user object and send to Auth.register
 	$scope.register = function () {
-		Auth.register($scope.user).then(function() {
+		Auth.register($scope.user).then(function(user) {
 			// Call Auth.login on our user object after registration is successful to log in user
 			return Auth.login($scope.user).then(function() {
+				user.username = $scope.user.username;
+				// Call createProfile() after a user registers
+				return Auth.createProfile(user);
+			}).then(function() {
 				// If login succeeds, redirect to homepage
 				$location.path('/');
 			});

@@ -4,14 +4,6 @@
 
 'use strict';
 
-/**
- * @ngdoc overview
- * @name devNewsApp
- * @description
- * # devNewsApp
- *
- * Main module of the application.
- */
 var app = angular
   .module('devNews', [
     'ngAnimate',
@@ -54,6 +46,10 @@ var app = angular
             return Auth.resolveUser();
           }
         }
+      })
+      .when('/users/:userId', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
       })
       .otherwise({
         redirectTo: '/'

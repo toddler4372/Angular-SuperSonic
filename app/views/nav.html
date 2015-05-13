@@ -1,16 +1,45 @@
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">NewsChatter</a>
-  </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
+
+<div class="ui padded grid">
+  <div class="blue two column row">
+      <div class="column">
+        <span><h2 class="ui inverted header">NewsChatter</h2>A Reddit Clone</span>
+      </div>
+      <div class="column">
+          <div class="ui list" ng-controller="NavCtrl">
+            <div class="item" ng-show="signedIn()">
+              <div class="right floated compact ui button" ng-click="logout()">Logout</div>
+              <img class="ui top aligned avatar image" src="/images/avatar/guy.jpg">
+              <div class="content">
+                <div class="header">{{ user.profile.username }}</div>
+                Last seen watching <b>Breaking Bad</b> <i>just now.</i>
+              </div>
+            </div>
+            <div class="item" ng-hide="signedIn()">
+              <div class="right floated compact ui button"><a href="#/login">Login</a></div>
+              <div class="right floated compact ui button"><a href="#/register">Register</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+              <!--<li ng-show="signedIn()">
+                <a ng-href="#/users/{{ user.profile.uid }}">
+                  <img ng-src="http://www.gravatar.com/avatar/{{ user.profile.md5_hash }}" class="nav-pic" />
+                  {{ currentUser.username }}
+                </a>
+              </li>-->
+    <div class="one column row">
+      <div class="white column">
+        <h2 class="ui header">Features</h2>
+        <p>First section of content</p>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- NEWS LINKS -->
+
   <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <form class="navbar-form navbar-left" role="search" ng-submit="submitPost()" ng-show="signedIn()">
       <div class="form-group">
@@ -21,25 +50,8 @@
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
-    <ul class="nav navbar-nav navbar-right" >
-      <li ng-show="signedIn()">
-        <p class="navbar-text">{{ user.profile.username }}</p>
-      </li>
-      <li ng-show="signedIn()">
-        <a ng-href="#/users/{{ user.profile.uid }}">
-          <img ng-src="http://www.gravatar.com/avatar/{{ user.profile.md5_hash }}" class="nav-pic" />
-          {{ currentUser.username }}
-        </a>
-      </li>
-      <li ng-show="signedIn()">
-        <a href="#" ng-click="logout()">Logout</a>
-      </li>
-      <li ng-hide="signedIn()">
-        <a href="#/login">Login</a>
-      </li>
-      <li ng-hide="signedIn()">
-        <a href="#/register">Register</a>
-      </li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+  </div>
+
+<!-- NEWS LINKS -->
+
+

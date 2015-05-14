@@ -85,3 +85,22 @@ body {
   font-size:11px;
   color:#bbb;
 }
+
+/*  ICONS  */
+
+.icon {transition: all .2s ease-in-out;padding-bottom: 1.1em;}
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
+span {color: #FFF;}
+
+.ui.comments .comment .avatar img {border-radius: 500rem;}
+
+.metadata span, div.content > a:nth-child(n) {color: rgba(0, 0, 0, 0.8);padding-bottom: 3px;}
+
+a.close-post {float: right;}
+
+span.url {color: rgba(0, 0, 0, 0.8);}
+

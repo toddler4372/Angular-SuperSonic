@@ -1,19 +1,25 @@
 
 
 <div class="ui padded grid">
-  <div class="blue two column row" style="max-height:90px">
-      <div class="column" style="padding-left:0;">
+  <div class="blue sixteen wide column row" style="max-height:90px">
+      <div class="seven wide column" style="padding-left:0;"><a href="/#">
         <img class="ui bottom aligned tiny image left floated" src="/images/SupersonicNews-Logo.svg" style="margin:0;margin-bottom:-1rem;">
-        <span><h1 class="ui inverted header" style="margin-top:0rem;">SuperSonic</h1>A Reddit News Clone</span>
+        <span><h2 class="ui inverted header" style="margin-top:.5rem;">SuperSonic</h2>A Reddit News Clone</span></a>
       </div>
-      <div class="column">
+      <div class="nine wide column">
           <div class="ui list" ng-controller="NavCtrl">
             <div class="item" ng-show="signedIn()">
-              <div class="right floated compact ui button" ng-click="logout()">Logout</div>
-              <img class="ui top aligned avatar image" src="/images/avatar/guy.jpg">
-              <div class="content">
-                <div class="header">{{ user.profile.username }}</div>
-                Watched <b>Breaking Bad</b> <i>just now.</i>
+              <div class="ui list" style="padding:0;">
+                <div class="item">
+                  <div class="right floated" ng-click="logout()">Logout &nbsp;<i class="sign out icon large"></i></div>
+                </div>
+                <div class="item">
+                  <div class="right floated"><img class="ui top aligned avatar image" src="/images/avatar/guy.jpg"></div>
+                  <div class="content right floated">
+                    <h4 class="header ui right aligned">{{ user.profile.username }}</h4>
+                    <i>watched</i> <b>Breaking Bad</b> <i>just now.</i>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="item" ng-hide="signedIn()">
@@ -39,20 +45,5 @@
 
 
 
-<!-- NEWS LINKS -->
-
-  <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <form class="navbar-form navbar-left" role="search" ng-submit="submitPost()" ng-show="signedIn()">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Title" ng-model="post.title">
-      </div>
-      <div class="form-group">
-      <input type="text" class="form-control" placeholder="Link" ng-model="post.url">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-
-<!-- NEWS LINKS -->
 
 

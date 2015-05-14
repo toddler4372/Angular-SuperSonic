@@ -1,9 +1,10 @@
 
 
 <div class="ui padded grid">
-  <div class="blue two column row">
-      <div class="column">
-        <span><h2 class="ui inverted header">NewsChatter</h2>A Reddit Clone</span>
+  <div class="blue two column row" style="max-height:90px">
+      <div class="column" style="padding-left:0;">
+        <img class="ui bottom aligned tiny image left floated" src="/images/SupersonicNews-Logo.svg" style="margin:0;margin-bottom:-1rem;">
+        <span><h1 class="ui inverted header" style="margin-top:0rem;">SuperSonic</h1>A Reddit News Clone</span>
       </div>
       <div class="column">
           <div class="ui list" ng-controller="NavCtrl">
@@ -12,7 +13,7 @@
               <img class="ui top aligned avatar image" src="/images/avatar/guy.jpg">
               <div class="content">
                 <div class="header">{{ user.profile.username }}</div>
-                Last seen watching <b>Breaking Bad</b> <i>just now.</i>
+                Watched <b>Breaking Bad</b> <i>just now.</i>
               </div>
             </div>
             <div class="item" ng-hide="signedIn()">

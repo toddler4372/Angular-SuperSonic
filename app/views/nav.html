@@ -1,12 +1,12 @@
 
 
 <div class="ui padded grid">
-  <div class="blue sixteen wide column row" style="max-height:90px">
-      <div class="seven wide column" style="padding-left:0;"><a href="/#">
+  <div class="blue sixteen wide column row" id="blue-header">
+      <div class="eight wide column" id="remove-padding-left"><a href="/#">
         <img class="ui bottom aligned tiny image left floated" src="/images/SupersonicNews-Logo.svg" style="margin:0;margin-bottom:-1rem;">
-        <span><h2 class="ui inverted header" style="margin-top:.5rem;">SuperSonic</h2>A Reddit News Clone</span></a>
+        <span><h4 class="ui inverted header" id="supersonic">SuperSonic</h4>a "Redditbook"</span></a>
       </div>
-      <div class="nine wide column">
+      <div class="eight wide column">
           <div class="ui list" ng-controller="NavCtrl">
             <div class="item" ng-show="signedIn()">
               <div class="ui list" style="padding:0;">
@@ -16,8 +16,8 @@
                 <div class="item">
                   <div class="right floated"><img class="ui top aligned avatar image" src="/images/avatar/guy.jpg"></div>
                   <div class="content right floated">
-                    <h4 class="header ui right aligned">{{ user.profile.username }}</h4>
-                    <i>watched</i> <b>Breaking Bad</b> <i>just now.</i>
+                    <p class="header ui right aligned" id="nav-username">{{ user.profile.username }}</p>
+                    <h6 id="watching"><i>watched</i> <b>Breaking Bad</b> <i>just now.</i></h6>
                   </div>
                 </div>
               </div>
@@ -35,12 +35,7 @@
                   {{ currentUser.username }}
                 </a>
               </li>-->
-    <div class="one column row">
-      <div class="white column">
-        <h2 class="ui header">Features</h2>
-        <p>First section of content</p>
-      </div>
-  </div>
+    
 </div>
 
 

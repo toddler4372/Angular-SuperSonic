@@ -17,6 +17,23 @@
   "devDependencies": {
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16"
-  },
+  }, 
+  "main": [
+    "bower_components/semantic-ui/dist/semantic.css",
+    "bower_components/semantic-ui/dist/semantic.js"
+  ],
+  "keywords": [
+    "semantic",
+    "ui",
+    "css3",
+    "framework"
+  ],
+  "license" : [
+    "http://semantic-ui.mit-license.org/"
+  ],
+  "ignore": [
+    "bower_components/semantic-ui/src/site",
+    "bower_components/semantic-ui/test"
+  ], 
   "appPath": "app"
 }

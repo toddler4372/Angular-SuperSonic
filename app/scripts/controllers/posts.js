@@ -1,15 +1,12 @@
 'use strict';
 
-// inject Post service and $scope object into controller
-app.controller('PostsCtrl', function ($scope, $location, Post, Auth) {
-  $scope.posts = Post.all;
-  $scope.user = Auth.user;
+app.controller('PostsCtrl', ['$scope', 'Post', 'Auth', function ($scope, Post, Auth) {
+    $scope.posts = Post.all;
+    $scope.user = Auth.user;
+    $scope.signedIn = Auth.signedIn;
 
-  $scope.post = {url: 'http://', title: ''};
-
-  $scope.deletePost = function (post) {
-  	Post.delete(post);
-  };
-
-});
+    $scope.deletePost = function (post) {
+        Post.delete(post);
+    };
+}]);
 

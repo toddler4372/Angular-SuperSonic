@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
-	$scope.post = {url: 'http//', title: ''};
+	$scope.post = {url: 'http://', title: ''};
 	$scope.signedIn = Auth.signedIn;
 	$scope.logout = Auth.logout;
 	$scope.user = Auth.user;

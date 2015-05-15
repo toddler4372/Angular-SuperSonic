@@ -88,11 +88,8 @@ body {
 
 /*  ICONS  */
 
-.icon {transition: all .2s ease-in-out;padding-bottom: 1.1em;}
-.icon:hover {
-  cursor: pointer;
-  transform: scale(1.4);
-}
+i.icon {padding-bottom: 1.1em;}
+i.icon:hover {cursor: pointer;opacity: 0.8;}
 
 span {color: #FFF;}
 
@@ -104,3 +101,25 @@ a.close-post {float: right;}
 
 span.url {color: rgba(0, 0, 0, 0.8);}
 
+h6 {padding: 0;margin: 0;font-size: .8em;}
+
+.ui.blue.button {color: #FFF;}
+
+@media only screen and (max-width: 540px) {
+  #watching {display: none;}
+  #nav-username {padding-top: .5rem;}
+}
+
+#supersonic {margin-top:.4rem;}
+
+#post-form {box-shadow: none;padding: 1rem 0 1rem 0;}
+
+.ui.secondary.button {background-color: #FC5A35;color: #FFF;}
+
+#blue-header {max-height: 90px;}
+
+#remove-padding-left {padding-left: 0;}
+
+.ui.comments {
+  max-width: 800px !important;
+}

@@ -22,8 +22,28 @@
 
     <!-- Add your site or application content here -->
 
-      <div ng-include="'views/nav.html'"></div>
-      <div class="container" ng-view=""></div>
+    <div class="ui right vertical inverted labeled icon sidebar menu" id="sidebar" ng-controller="NavCtrl">
+      <a class="item" href="#/">
+        <i class="home icon"></i>
+        Home
+      </a>
+      <a class="item" href="#/login" ng-hide="signedIn()">
+        <i class="sign in icon large"></i>
+        Sign in
+      </a>
+      <a class="item" href="#/register" ng-hide="signedIn()">
+        <i class="add user icon"></i>
+        Register
+      </a>
+      <a class="item" ng-click="logout()" ng-show="signedIn()">
+        <i class="sign out icon large"></i>
+        Sign out
+      </a>
+    </div>
+    <div class="pusher">
+        <div ng-include="'views/nav.html'"></div>
+        <div class="container" ng-view=""></div>
+    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

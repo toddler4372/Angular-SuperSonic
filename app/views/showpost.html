@@ -1,4 +1,7 @@
-<div class="container posts-page">
+<div class="ui padded grid">
+  <div class="one column row">
+    <div class="white column">
+		<div class="ui comments">
 
 	<!--<div class="post row">
 		<div class="col-xs-1">
@@ -20,26 +23,55 @@
 
 		</div>
 
-	</div>-->
+		</div>-->
+		<br>
+		<div class="comment" ng-repeat="comment in comments">
+				<a class="ui avatar image">
+			      <img src="/images/avatar/guy.jpg">
+			    </a>
+			    <div class="content">
+			      	<a class="author"><a ng-href="#/users/{{ comment.creatorUID }}"><b>{{ comment.creator }}</b></a></span></a>
+			      	<div class="metadata">
+				        <span class="date">Yesterday at 12:30AM</span>
+				    	</div>
+				    	<a ng-click="deleteComment(comment)" ng-show="signedIn() && comment.creatorUID === user.uid" class="close-post"><i class="blue remove circle icon large"></i></a>
 
-	<div ng-repeat="comment in comments" class="row cmt">
-		<div class="col-md-12">
-			<p>{{ comment.text }}</p>
-			<p class="author">posted by <a ng-href="#/profile/{{ comment.creatorUID }}">{{ comment.creator }}</a>
-			<a ng-href="#/posts/{{ post.$id }}" ng-click="deleteComment(comment, $index)" ng-show="signedIn() && comment.creatorUID === user.uid">(delete)</a></p>
+					<div>
+					<p>{{ comment.text }}</p>
+					<p class="author">posted by <a ng-href="#/profile/{{ comment.creatorUID }}">{{ comment.creator }}</a></p>
+					</div>
+				</div>
+			<div class="ui horizontal divider"><i class="space shuttle icon"></i></div>
 		</div>
-	</div>
 
-
-	<div class="cmt-form">
-		<div ng-hide="signedIn()">
+	<!-- COMMENT AREA -->
+	<div ng-hide="signedIn()">
 			<p><a href="#/login">Sign in</a> to post a comment</p>
-		</div>
-
-		<form ng-show="signedIn()" ng-submit="addComment()">
-			<textarea ng-model="commentText" placeholder="Post a Comment" class="form-control"></textarea><br />
-			<input type="submit" value="Post Comment" class="btn btn-primary" />
-		</form>
 	</div>
+
+    <form class="navbar-form navbar-left" role="search" ng-submit="addComment()" ng-show="signedIn()">
+      <div class="ui one column middle aligned relaxed fitted stackable grid">
+        <div class="column">
+          <div class="ui form segment" id="post-form">
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <textarea type="text" placeholder="Add comment..." ng-model="commentText" class="form-control"></textarea>
+              </div>
+            </div>
+            
+            <button class="huge 1 fluid ui secondary labeled icon button" type="submit">
+              Add comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="add icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
 
 </div>
+</div>
+</div>
+</div>
+	
+

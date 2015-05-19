@@ -1,17 +1,49 @@
-<div class="auth-forms">
+<div class="ui padded grid">
+  <div class="one column row">
+    <div class="white column">
 
-	<h2>Register</h2>
 
-	<form ng-submit="register()" name="form">
-		<div ng-show="error || form.username.$error">
-		<p ng-show="error" class="text-danger">{{ error }}</p>
-			<p ng-show="form.username.$error.taken" class="text-danger">Username is already taken.</p>
-			<p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
-		</div>
-		<input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
-		<input type="text" ng-model="user.username" placeholder="Username" name="username" class="form-control"><br>
-		<input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-		<input type="submit" value="Register" class="btn btn-primary" />
-	</form>
 
+ <div class="ui comments">
+
+    <form class="navbar-form navbar-left" role="search" ng-submit="register()">
+      <div ng-show="error || form.username.$error">
+		<p ng-show="error" class="ui info message">{{ error }}</p>
+			<p ng-show="form.username.$error.taken" class="ui info message">Username is already taken.</p>
+			<p ng-show="form.username.$error.invalid" class="ui info message">Username contains invalid characters.</p>
+	  </div>
+      <div class="ui one column middle aligned relaxed fitted stackable grid">
+        <div class="column">
+          <div class="ui form segment" id="post-form">
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <input type="email" ng-model="user.email" placeholder="Email" class="form-control">
+                <i class="mail icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <input type="text" ng-model="user.username" placeholder="Username" class="form-control">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
+                <i class="unlock alternate icon"></i>
+              </div>
+            </div>
+            <button class="huge 1 fluid ui secondary labeled icon button" type="submit">
+              Create Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="add user icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+</div>
 </div>

@@ -1,3 +1,10 @@
+@media only screen and (max-width: @computerBreakpoint) {
+  html.ios {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 body {
   background: #FFF;
 }
@@ -89,11 +96,11 @@ body {
 /*  ICONS  */
 
 i.icon {padding-bottom: 1.1em;}
-i.icon:hover {cursor: pointer;opacity: 0.8;}
+i.icon:hover {cursor: pointer;}
 
 span {color: #FFF;}
 
-.ui.comments .comment .avatar img {border-radius: 500rem;}
+.ui.comments .comment .avatar img {border-radius: 500rem;margin-top: -.1rem;}
 
 .metadata span, div.content > a:nth-child(n) {color: rgba(0, 0, 0, 0.8);padding-bottom: 3px;}
 
@@ -114,7 +121,7 @@ h6 {padding: 0;margin: 0;font-size: .8em;}
 
 #post-form {box-shadow: none;padding: 1rem 0 1rem 0;}
 
-.ui.secondary.button {background-color: #FC5A35;color: #FFF;}
+.ui.secondary.button, .ui.secondary.button:hover, .ui.secondary.button:active {background-color: #FC5A35;color: #FFF;}
 
 #blue-header {max-height: 90px;}
 
@@ -122,4 +129,23 @@ h6 {padding: 0;margin: 0;font-size: .8em;}
 
 .ui.comments {
   max-width: 800px !important;
+}
+
+#sidebar-button {
+  margin-top: .5rem;
+  margin-right: .5rem;
+}
+
+.pusher {background: #FFF !important;}
+
+button i {padding-left: .7rem;}
+
+textarea {max-height: 8em !important;}
+
+.content {word-wrap: break-word;}
+
+#bottom {
+  display: block;
+  position: absolute;
+  bottom: 0;
 }

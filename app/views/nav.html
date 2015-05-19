@@ -1,15 +1,20 @@
-
-
 <div class="ui padded grid">
   <div class="blue sixteen wide column row" id="blue-header">
       <div class="eight wide column" id="remove-padding-left"><a href="/#">
         <img class="ui bottom aligned tiny image left floated" src="/images/SupersonicNews-Logo.svg" style="margin:0;margin-bottom:-1rem;">
         <span><h4 class="ui inverted header" id="supersonic">SuperSonic</h4>a "Redditbook"</span></a>
       </div>
-      <div class="eight wide column">
+      <div class="eight wide column" id="menu-container">
           <div class="ui list" ng-controller="NavCtrl">
-            <div class="item" ng-show="signedIn()">
+              <!-- SIDEBAR -->
+              <div class="ui icon toggle button right floated" id="sidebar-button">
+                  <i class="content icon big"></i>
+              </div>
+
+              <!-- SIDEBAR -->
+            <!--<div class="item" ng-show="signedIn()">
               <div class="ui list" style="padding:0;">
+
                 <div class="item">
                   <div class="right floated" ng-click="logout()">Logout &nbsp;<i class="sign out icon large"></i></div>
                 </div>
@@ -25,7 +30,7 @@
             <div class="item" ng-hide="signedIn()">
               <div class="right floated compact ui button"><a href="#/login">Login</a></div>
               <div class="right floated compact ui button"><a href="#/register">Register</a></div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -35,8 +40,17 @@
                   {{ currentUser.username }}
                 </a>
               </li>-->
-    
+
+        <script>
+          $('.right.sidebar').first()
+            .sidebar('setting', 'transition', 'uncover')
+            .sidebar('attach events', '.toggle.button')
+            .sidebar('attach events', '.menu .item')
+          ;
+        </script>
+
 </div>
+
 
 
 

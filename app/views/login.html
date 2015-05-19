@@ -1,12 +1,40 @@
-<div class="auth-forms">
+<div class="ui padded grid">
+  <div class="one column row">
+    <div class="white column">
 
-  <h2>Log In</h2>
 
-  <form ng-submit="login()">
-  	<p ng-show="error" class="text-danger">{{ error }}</p>
-    <input type="email" ng-model="user.email" placeholder="Email" class="form-control"><br>
-    <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-    <input type="submit" value="Log in" class="btn btn-primary" />
-  </form>
+
+ <div class="ui comments">
+
+    <form class="navbar-form navbar-left" role="search" ng-submit="login()">
+      <p ng-show="error" class="ui info message">{{ error }}</p>
+      <div class="ui one column middle aligned relaxed fitted stackable grid">
+        <div class="column">
+          <div class="ui form segment" id="post-form">
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <input type="email" ng-model="user.email" placeholder="Email" class="form-control">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <div class="huge ui fluid left icon input">
+                <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
+                <i class="unlock alternate icon"></i>
+              </div>
+            </div>
+            <button class="huge 1 fluid ui secondary labeled icon button" type="submit">
+              Sign in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="sign in icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
 
 </div>
+</div>
+</div>
+

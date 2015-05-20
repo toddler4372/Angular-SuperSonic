@@ -134,6 +134,7 @@ h6 {padding: 0;margin: 0;font-size: .8em;}
 #sidebar-button {
   margin-top: .5rem;
   margin-right: .5rem;
+  margin-bottom: 1.5rem;
 }
 
 .pusher {background: #FFF !important;}
@@ -149,3 +150,7 @@ textarea {max-height: 8em !important;}
   position: absolute;
   bottom: 0;
 }
+
+#logo {position: absolute;top: 7px;width: 245px !important;min-width: 245px !important;}
+
+#comment-spacing {padding-top: 14px;}

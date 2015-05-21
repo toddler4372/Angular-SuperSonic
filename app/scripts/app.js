@@ -17,7 +17,7 @@ var app = angular
 
   .constant('FIREBASE_URL', 'https://sweltering-heat-8723.firebaseio.com/')
 
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/posts.html',
@@ -54,4 +54,4 @@ var app = angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);

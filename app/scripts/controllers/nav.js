@@ -17,7 +17,7 @@ app.controller('NavCtrl', function ($scope, $location, Post, Auth, $window) {
 	    });
   	};
 
-})
+});
 
 
 	      

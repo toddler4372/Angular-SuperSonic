@@ -1,2 +1,1 @@
 ![Alt text](https://github.com/toddler4372/Angular-SuperSonic/blob/master/app/images/app-supersonic.jpg "Supersonic Screenshots")
-![Alt text](https://github.com/toddler4372/Angular-Tweeter/blob/master/app/images/app-tweeter.jpg "Tweeter Screenshots")

@@ -1,0 +1,1 @@
+![Alt text](https://github.com/toddler4372/Angular-SuperSonic/tree/master/app/images/app-supersonic.jpg "Supersonic Screenshots")
